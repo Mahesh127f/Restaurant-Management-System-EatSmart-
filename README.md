@@ -44,7 +44,31 @@ eatsmart/
 │   ├── reports.php         ← Sales report + AI demand prediction
 │   ├── customers.php       ← Customer list
 │   └── sidebar.php         ← Admin sidebar include
+├── images/
+│   └── menu/
+│       ├── butter_chicken.jpg
+│       ├── butter_naan.jpg
+│       ├── chicken_65.jpg
+│       ├── chichen_biryani.jpg
+│       ├── dal_makhani.jpg
+│       ├── egg_fried_rice.jpg
+│       ├── fresh_lime_soda.jpg
+│       ├── garlic_naan.jpg
+│       ├── gulab_jamun.jpg
+│       ├── kulfi.jpg
+│       ├── mango_lassi.jpg
+│       ├── masala_chai.jpg
+│       ├── mutton_rogan_josh.jpg
+│       ├── palak_paneer.jpg
+│       ├── paneer_butter_masala.jpg
+│       ├── paneer_tikka.jpg
+│       ├── rasgulla.jpg
+│       ├── seekh_kabab.jpg
+│       ├── tandoori_roti.jpg
+│       ├── veg_biryani.jpg
+│       ├── veg_spring_rolls.jpg
 └── database.sql            ← Full database with seed data
+
 ```
 
 ---
@@ -129,3 +153,5 @@ Visit: **http://localhost/eatsmart**
 - SQL injection protected via prepared statements
 - Input sanitized with `htmlspecialchars` + `strip_tags`
 - Cart stored in `localStorage` (no server needed for browsing)
+
+Built with ❤️ in India By MAHESH YADAV— EatSmart, 2026
