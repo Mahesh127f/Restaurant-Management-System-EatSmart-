@@ -1,16 +1,85 @@
-# EatSmart — Restaurant Management System
-**Project Name: EatSmart**
+# 🍽️ EatSmart – Restaurant Management System
 
-## Tech Stack
-- **Frontend:** HTML5, CSS3, Vanilla JavaScript
-- **Backend:** PHP 7.4+
-- **Database:** MySQL 5.7+
-- **Local Server:** XAMPP / WAMP / LAMP
+A modern web-based Restaurant Management System built using **PHP, MySQL, HTML, CSS, and JavaScript**. EatSmart simplifies restaurant operations by allowing customers to browse menus, place orders, reserve tables, and track their orders, while providing administrators with powerful tools to manage the restaurant efficiently.
 
 ---
 
-## Project Structure
-```
+## 🌐 Live Demo
+
+**Website:** https://eatsmart.great-site.net
+
+---
+
+## 📌 Features
+
+### 👤 Customer Features
+
+- User Registration & Login
+- Browse Food Menu
+- Search & Category Filter
+- Food Images
+- Add to Cart
+- Secure Checkout
+- Table Reservation
+- Live Order Tracking
+- Order History
+- Reservation History
+- Waste Reduction Deals
+- Loyalty Points System
+- AI Chatbot Assistance
+
+---
+
+### 👨‍💼 Admin Features
+
+- Admin Dashboard
+- Manage Customers
+- Manage Orders
+- Kitchen Display Board
+- Manage Menu
+- Manage Reservations
+- Manage Waste Deals
+- Sales Reports
+- Demand Prediction Dashboard
+
+---
+
+### 🤖 AI Features
+
+- Popular Dish Recommendation
+- Weekly Demand Prediction
+- Rule-based Restaurant Chatbot
+- Dashboard Analytics
+
+---
+
+# 🛠️ Tech Stack
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+
+- PHP 8+
+
+### Database
+
+- MySQL
+
+### Server
+
+- Apache
+- XAMPP (Local Development)
+- InfinityFree (Deployment)
+
+---
+
+# 📂 Project Structure
+
+```text
 eatsmart/
 ├── index.php               ← Homepage
 ├── menu.php                ← Full menu with filter & search
@@ -73,85 +142,244 @@ eatsmart/
 
 ---
 
-## Setup Instructions
+# 🚀 Installation (Local)
 
-### Step 1 — Install XAMPP
-Download and install XAMPP from https://www.apachefriends.org/
-Start **Apache** and **MySQL** services.
+## 1. Clone Repository
 
-### Step 2 — Copy Project
-Copy the `eatsmart` folder to `C:/xampp/htdocs/` (Windows) or `/var/www/html/` (Linux/Mac)
+```bash
+git clone https://github.com/Mahesh127f/Restaurant-Management-System_EatSmart.git
+```
 
-### Step 3 — Create Database
-1. Open http://localhost/phpmyadmin
-2. Click **New** → name it `eatsmart` → click **Create**
-3. Click the `eatsmart` database → go to **Import** tab
-4. Upload `database.sql` → click **Go**
+---
 
-### Step 4 — Configure Database
-Open `php/config.php` and update if needed:
+## 2. Move Project
+
+Copy the folder into
+
+```
+xampp/htdocs/
+```
+
+---
+
+## 3. Start XAMPP
+
+Start
+
+- Apache
+- MySQL
+
+---
+
+## 4. Create Database
+
+Open
+
+```
+http://localhost/phpmyadmin
+```
+
+Create database
+
+```
+eatsmart
+```
+
+Import
+
+```
+database.sql
+```
+
+---
+
+## 5. Configure Database
+
+Open
+
+```
+php/config.php
+```
+
+Use
+
 ```php
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');       // your MySQL username
-define('DB_PASS', '');           // your MySQL password (blank for XAMPP default)
+define('DB_USER', 'root');
+define('DB_PASS', '');
 define('DB_NAME', 'eatsmart');
+
 define('SITE_URL', 'http://localhost/eatsmart');
 ```
 
-### Step 5 — Open in Browser
-Visit: **http://localhost/eatsmart**
+---
+
+## 6. Run Project
+
+```
+http://localhost/eatsmart
+```
 
 ---
 
-## Demo Accounts
+# ☁️ Deployment on InfinityFree
 
-| Role     | Email                    | Password |
-|----------|--------------------------|----------|
-| Admin    | admin@eatsmart.com       | password |
-| Kitchen  | kitchen@eatsmart.com     | password |
-| Customer | rahul@gmail.com          | password |
-| Customer | priya@gmail.com          | password |
+### 1. Create Hosting Account
+
+Create a free hosting account on InfinityFree.
 
 ---
 
-## Features Implemented
+### 2. Create MySQL Database
 
-### Customer Features
-- ✅ User Registration & Login
-- ✅ Full Menu with category filter & search
-- ✅ Add to Cart (localStorage, works without login)
-- ✅ Pre-Order food before arrival
-- ✅ Table Reservation with time slot system
-- ✅ Live Order Status Tracking (auto-refresh every 8s)
-- ✅ Waste Reduction Deals with countdown timers
-- ✅ Loyalty Points (1 point per ₹10 spent)
-- ✅ My Orders page
-- ✅ My Reservations page
-- ✅ AI Chatbot (rule-based, handles 15+ query types)
+Example:
 
-### Admin Features
-- ✅ Dashboard with live stats & charts
-- ✅ Full Order Management (update status)
-- ✅ Kitchen Display Board (auto-refreshes every 15s)
-- ✅ Menu Manager (add/edit/hide items)
-- ✅ Reservation Manager (confirm/cancel/complete)
-- ✅ Waste Deals Manager (create/deactivate deals)
-- ✅ Sales Reports with date filtering
-- ✅ Customer database view
+```text
+Host:
+sql308.infinityfree.com
 
-### AI Features
-- ✅ Popular Dish Recommendations (by order count)
-- ✅ Demand Prediction by day of week
-- ✅ Rule-based Chatbot with 15+ intents
-- ✅ Top dish bar charts on dashboard
+Database:
+if0_42386102_eatsmart
+
+Username:
+if0_42386102
+
+Password:
+********
+```
 
 ---
 
-## Notes for Submission
-- All passwords are hashed using PHP `password_hash()` (bcrypt)
-- Sessions used for authentication
-- SQL injection protected via prepared statements
-- Input sanitized with `htmlspecialchars` + `strip_tags`
-- Cart stored in `localStorage` (no server needed for browsing)
+### 3. Import Database
 
-Built with ❤️ in India By MAHESH YADAV— EatSmart, 2026
+Open phpMyAdmin
+
+Import
+
+```
+database.sql
+```
+
+---
+
+### 4. Configure Database
+
+Update
+
+```
+php/config.php
+```
+
+```php
+define('DB_HOST', 'sql308.infinityfree.com');
+define('DB_USER', 'if0_42386102');
+define('DB_PASS', 'YOUR_PASSWORD');
+define('DB_NAME', 'if0_42386102_eatsmart');
+
+define('SITE_URL', 'https://eatsmart.great-site.net');
+```
+
+---
+
+### 5. Upload Files
+
+Upload all project files to
+
+```
+htdocs/
+```
+
+Do **not** upload
+
+```
+database.sql
+```
+
+---
+
+### 6. UTF-8 Emoji Support
+
+Run the following SQL if category emojis appear as `?`:
+
+```sql
+ALTER DATABASE if0_42386102_eatsmart
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+ALTER TABLE categories
+CONVERT TO CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+```
+
+Also verify the database connection uses:
+
+```php
+$conn->set_charset('utf8mb4');
+```
+
+---
+
+# 👤 Demo Accounts
+
+| Role | Email | Password |
+|------|-------|----------|
+| Admin | admin@eatsmart.com | password |
+| Kitchen | kitchen@eatsmart.com | password |
+| Customer | mahesh@gmail.com | password |
+| Customer | priya@gmail.com | password |
+
+---
+
+# 🔒 Security Features
+
+- Password Hashing (bcrypt)
+- Prepared SQL Statements
+- Session Authentication
+- Input Validation
+- XSS Protection
+- SQL Injection Protection
+
+---
+
+# 📸 Screenshots
+
+You can add screenshots here:
+
+- Home Page
+- Menu
+- Login
+- Cart
+- Reservation
+- Admin Dashboard
+- Kitchen Dashboard
+- Reports
+
+---
+
+# 🚀 Future Enhancements
+
+- Online Payment Gateway
+- Email Notifications
+- SMS Notifications
+- QR Code Menu
+- PWA Support
+- Real AI Chatbot Integration
+- Multi-Restaurant Support
+
+---
+
+# 👨‍💻 Author
+
+**Mahesh Yadav**
+
+B.Tech Information Technology
+
+Amity University, Noida
+
+GitHub
+
+https://github.com/Mahesh127f
+
+---
+
+## ⭐ If you like this project, consider giving it a star on GitHub!
